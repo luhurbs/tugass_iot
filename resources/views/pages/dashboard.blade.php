@@ -307,6 +307,8 @@
         // Mulai permintaan data saat halaman dimuat
         window.addEventListener('load', function() {
             chartGas = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'monitoringGas',
                     type: 'spline',
                     events: {
                         load: requestDataGas // Memanggil requestDataGas saat grafik dimuat
@@ -333,7 +335,7 @@
                     data: [] // Data awal kosong, akan diisi oleh requestDataGas
                 }]
             });
-        });
+            });
     </script>
 @endpush
 
